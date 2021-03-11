@@ -1,0 +1,21 @@
+Engel Solar: Mejino_Arenas
+
+Modem IP: 10.10.56.0/24
+VPN IP: 10.10.0.56/32
+User: root
+Password: Tarragona_1
+
+Web Access: 
+10.10.56.1/10.10.0.56
+User: admin
+Pass: Tarragona_1
+
+Wireless:
+SSID: ESolar_Mejino_Arenas
+Pass: Tarragona_1
+
+SIM ICCID: 893108951903816084 3 --> Change!!
+
+Router IMEI: 867060033823994 --> Change!!
+
+Router Firmware Version: RUT2XX_R_00.01.02.3 --> Change!!

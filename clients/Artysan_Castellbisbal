@@ -1,0 +1,21 @@
+Engel Solar: Artysan_Odena
+
+Modem IP: 10.10.54.0/24
+VPN IP: 10.10.0.54/32
+User: root
+Password: Tarragona_1
+
+Web Access: 
+10.10.54.1/10.10.0.54
+User: admin
+Pass: Tarragona_1
+
+Wireless:
+SSID: ESolar_ARTYSAN_ODENA
+Pass: Tarragona_1
+
+SIM ICCID: 893108951903816087 6
+
+Router IMEI: 867060033827466
+
+Router Firmware Version: UC20EQBR03A11E1G

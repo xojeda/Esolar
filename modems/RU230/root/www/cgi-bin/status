@@ -1,0 +1,39 @@
+#!/bin/sh
+echo "Content-type: text/json"
+echo ""
+
+I=0
+echo  -n "{ \"fixed_hosts\":["
+while true ; do
+    MAC=`uci get dhcp.@host[$I].mac 2>/dev/null`
+    NAME=`uci get dhcp.@host[$I].name 2>/dev/null`
+    IP=`uci get dhcp.@host[$I].ip 2>/dev/null`
+    if [ -z "$MAC" ]; then
+        break
+    fi
+    if [ $I -ne 0 ]; then
+        echo -n ","
+    fi
+    echo -n "{\"name\" : \""$NAME"\","
+    echo  -n "\"ip\" : \""$IP"\","
+    echo  -n "\"mac\" : \""$MAC"\"}"
+
+    let I=I+1
+done
+echo "],"
+echo  "\"dynamic_hosts\":["
+I=0
+while read -r line; do
+    MAC=`echo $line |cut -d " " -f 2`
+    NAME=`echo $line |cut -d " " -f 4`
+    IP=`echo $line |cut -d " " -f 3`
+    if [ $I -ne 0 ]; then
+        echo -n ","
+    fi
+    echo  "{\"name\" : \""$NAME"\","
+    echo   "\"ip\" : \""$IP"\","
+    echo   "\"mac\" : \""$MAC"\"}"
+
+    let I=I+1
+done < "/var/dhcp.leases"
+echo "]}"

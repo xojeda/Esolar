@@ -1,0 +1,21 @@
+Engel Solar: Mejino_Atayuela
+
+Modem IP: 10.10.57.0/24
+VPN IP: 10.10.0.57/32
+User: root
+Password: Tarragona_1
+
+Web Access: 
+10.10.57.1/10.10.0.57
+User: admin
+Pass: Tarragona_1
+
+Wireless:
+SSID: ESolar_Mejino_Atayuela
+Pass: Tarragona_1
+
+SIM ICCID: 893108951903816084 3
+
+Router IMEI: 867060033823994
+
+Router Firmware Version: RUT2XX_R_00.01.02.3
